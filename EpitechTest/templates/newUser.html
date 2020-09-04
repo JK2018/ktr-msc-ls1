@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block main %}
+<H1>New User</H1>
+
+<a href="{{ url_for('landingPage') }}"> Back to Login </a>
+
+<form action="{{ url_for('newUser') }}" method="post">
+    {{ form.csrf_token }}
+    {{ form.name.label }}
+    {{ form.name }}
+    {{ form.companyName.label }}
+    {{ form.companyName }}
+    {{ form.emailAddress.label }}
+    {{ form.emailAddress }}
+    {{ form.telephoneNumber.label }}
+    {{ form.telephoneNumber }}
+    {{ form.password.label }}
+    {{ form.password }}
+    {{ form.submit }}
+</form>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+<H1>Welcome to this Buisness Card manager.</H1>
+
+
+
+
+
+
+<a href="{{ url_for('newUser') }}"> Register here if you are new! </a>
+
+<form action="{{ url_for('landingPage') }}" method="post">
+    {{ form.csrf_token }}
+    {{ form.name.label }}
+    {{ form.name }}
+    {{ form.password.label }}
+    {{ form.password }}
+    {{ form.submit }}
+</form>
+
+
+{% endblock %}
+
+
